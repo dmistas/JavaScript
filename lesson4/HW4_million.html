@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+        var i=0, n, arr=[];
+        
+        arr[0]={
+            Qwestion:"Qwestion \n",
+            a1:"Answer1 \n",
+            a2:"Answer2 \n",
+            a3:"Answer3 \n",
+            a4:"Answer4 \n",
+            correct:1,
+        }
+        
+        arr[1]={
+            Qwestion:"Qwestion \n",
+            a1:"Answer1 \n",
+            a2:"Answer2 \n",
+            a3:"Answer3 \n",
+            a4:"Answer4 \n",
+            correct:2,
+        }
+        
+        arr[2]={
+            Qwestion:"Qwestion \n",
+            a1:"Answer1 \n",
+            a2:"Answer2 \n",
+            a3:"Answer3 \n",
+            a4:"Answer4 \n",
+            correct:3,
+        }
+        
+        arr[3]={
+            Qwestion:"Qwestion \n",
+            a1:"Answer1 \n",
+            a2:"Answer2 \n",
+            a3:"Answer3 \n",
+            a4:"Answer4 \n",
+            correct:4,
+        }
+        
+        do {
+            n = +prompt(arr[i].Qwestion+arr[i].a1+arr[i].a2+arr[i].a3+arr[i].a4+
+                        arr[i].correct);
+            
+            if (n == arr[i].correct) {
+                alert("Верно");
+                    if(i==(arr.length-1)) {
+                        alert ("Вы миллионер!");
+                        break;
+                    }
+                i++;
+            } else {
+                alert("u lose");
+                break;
+            }
+            
+        } while(i<arr.length);
+            
+            
+        alert("the end");
+        
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
