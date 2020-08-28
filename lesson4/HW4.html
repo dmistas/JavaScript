@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        
+    
+        function fillObject(arr) {
+            while (arr.length<3) {
+                arr.unshift(0);
+            }
+            object.sotni=arr[0];
+            object.des=arr[1];
+            object.eden=arr[2];
+            
+        }
+        
+        var object={};
+        var number = prompt("Введите положительное число");
+        
+        if (number>999) {
+            alert("Число больше 999");
+            }
+        else {
+            var mass = number.split("");
+            fillObject(mass);
+        }
+                
+        console.log(object);
+        
+    
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
