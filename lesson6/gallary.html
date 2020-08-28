@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title> Image Gallery </title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script>
+        function init() {
+            var images = document.getElementsByTagName("img");
+            for (var i = 0; i < images.length; i++) {
+                images[i].onclick = changeBigPicture;
+            }
+        }
+        
+        function changeBigPicture(eventObj) {
+            var appDiv = document.getElementById("big_picture");
+            appDiv.innerHTML = "";
+            var eventElement = eventObj.target;
+            var imageNameParts = eventElement.id.split("_");
+            var src = "img/" + imageNameParts[1] + ".jpg";
+            var imageDomElement = document.createElement("img");
+            imageDomElement.src = src;
+            imageDomElement.onerror = function() {
+                alert ("Изображение отсутствует");
+            }
+            appDiv.appendChild(imageDomElement);
+            
+        }
+        window.onload = init;
+       
+
+    </script>
+</head>
+
+<body>
+    
+    <div id="gallery">
+        <img id="image_1" src="imgSmall/1.jpg">
+        <img id="image_2" src="imgSmall/2.jpg">
+        <img id="image_3" src="imgSmall/3.jpg">
+    </div>
+    <div id="big_picture"></div>
+</body>
+
+</html>
